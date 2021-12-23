@@ -25,7 +25,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
       - uses: actions/checkout@v2
-      - with:
+        with:
           persist-credentials: false
 
       # Runs a single command using the runners shell
@@ -34,15 +34,11 @@ jobs:
 
       # Lint
       - name: Lint
-        run: |
-          npm run lint,
-          echo Lint has been executed.
+        run: npm run lint,
           
       # Runs a set of commands using the runners shell
       - name: Build
-        run: |
-          npm run build,
-          echo Build is operated.
+        run: npm run build,
           
       - name: Test
         run: npm test
